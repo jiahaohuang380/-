@@ -1,0 +1,183 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* 背景色 - 柔和的浅灰 */
+    --background: 220 20% 98%;
+    --foreground: 222 47% 11%;
+    
+    /* 卡片 - 纯白带柔和阴影 */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    /* 弹出层 */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* 主色 - 现代蓝紫色渐变 */
+    --primary: 250 85% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 270 80% 65%;
+    
+    /* 次要色 - 柔和的灰蓝 */
+    --secondary: 220 15% 95%;
+    --secondary-foreground: 222 47% 11%;
+    
+    /* 静音色 */
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 46%;
+    
+    /* 强调色 - 极浅的蓝紫 */
+    --accent: 250 100% 97%;
+    --accent-foreground: 250 85% 60%;
+    
+    /* 危险色 */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* 边框和输入 */
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 250 85% 60%;
+    
+    /* 图表颜色 - 现代配色 */
+    --chart-1: 250 85% 60%;
+    --chart-2: 160 70% 50%;
+    --chart-3: 30 90% 60%;
+    --chart-4: 280 70% 65%;
+    --chart-5: 340 80% 60%;
+    
+    /* 侧边栏 */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 250 85% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 250 100% 97%;
+    --sidebar-accent-foreground: 250 85% 60%;
+    --sidebar-border: 220 15% 90%;
+    --sidebar-ring: 250 85% 60%;
+    
+    /* 成功/警告/信息色 */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --info: 199 89% 48%;
+    
+    /* 阴影效果 */
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    
+    /* 渐变 */
+    --gradient-primary: linear-gradient(135deg, hsl(250 85% 60%) 0%, hsl(270 80% 65%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(220 20% 99%) 100%);
+    --gradient-background: linear-gradient(180deg, hsl(220 20% 98%) 0%, hsl(250 100% 99%) 100%);
+  }
+
+  .dark {
+    /* 背景色 - 深色模式 */
+    --background: 222 47% 8%;
+    --foreground: 210 40% 98%;
+    
+    /* 卡片 */
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    
+    /* 弹出层 */
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    
+    /* 主色 */
+    --primary: 250 85% 65%;
+    --primary-foreground: 222 47% 11%;
+    --primary-glow: 270 80% 70%;
+    
+    /* 次要色 */
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    
+    /* 静音色 */
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    
+    /* 强调色 */
+    --accent: 250 50% 15%;
+    --accent-foreground: 250 85% 65%;
+    
+    /* 危险色 */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    
+    /* 边框和输入 */
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 250 85% 65%;
+    
+    /* 图表颜色 */
+    --chart-1: 250 85% 65%;
+    --chart-2: 160 70% 55%;
+    --chart-3: 30 90% 65%;
+    --chart-4: 280 70% 70%;
+    --chart-5: 340 80% 65%;
+    
+    /* 侧边栏 */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 250 85% 65%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 250 50% 15%;
+    --sidebar-accent-foreground: 250 85% 65%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 250 85% 65%;
+    
+    /* 成功/警告/信息色 */
+    --success: 142 76% 45%;
+    --warning: 38 92% 60%;
+    --info: 199 89% 58%;
+    
+    /* 阴影效果 */
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+    --shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+    
+    /* 渐变 */
+    --gradient-primary: linear-gradient(135deg, hsl(250 85% 65%) 0%, hsl(270 80% 70%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(222 47% 11%) 0%, hsl(222 47% 13%) 100%);
+    --gradient-background: linear-gradient(180deg, hsl(222 47% 8%) 0%, hsl(250 50% 10%) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+  }
+}
